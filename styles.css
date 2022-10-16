@@ -1,10 +1,14 @@
+* {
+    color: black;
+}
+
+a[href^="/"] {
+    color: #3e7dad;
+}
+
 header {
     font-style: italic;
     text-align: center;
-}
-
-header :hover {
-    color: white;
 }
 
 h1 {
@@ -16,17 +20,26 @@ h1 {
     padding-right: 0px;
 }
 
+h1:hover {
+    color: hsl(0, 0%, 100%);
+}
+
 h2 {
     color: #295373;
+    margin: auto;
 }
 
 h3 {
     color: #3e7dad;
+    margin: auto;
 }
 
 body {
     font-family: "regular", "Source Sans Pro", sans-serif;
-    margin: 4em;
+    margin-top: 4em;
+    margin-bottom: 4em; 
+    margin-left: 4em; 
+    margin-right: 4em;
     background-color: rgb(213, 223, 232);
 }
 
@@ -34,14 +47,18 @@ div {
     position: relative;
 }
 
+audio, img {
+    padding: 4mm 0mm 4mm 0mm;
+}
+
 img {
     max-width: 25%;
     min-width: 200pt;
-    padding: 4mm 2mm 4mm 2mm;
+    
     display: inline;
 }
 
-img :hover {
+#special:hover {
     display: none;
 }
 
@@ -50,7 +67,7 @@ video {
     width: 40vmin;
 }
 
-video :active {
+video:active {
     border-style: solid;
     border-width: 1px;
     border-color: white;
@@ -60,8 +77,56 @@ button {
     border-radius: 10%;
 }
 
-.underline {
+fieldset label {
+    font-variant: all-small-caps;
+    font-style: bold;
+}
+
+ol ~ ul {
+    font-style: italic;
+}
+
+p + h2 {
     text-decoration: dashed underline;
+}
+
+p.indent {
+    margin: 20px;
+}
+
+.flex {
+    align-content: space-around;
+    align-self: center;
+    background-color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.flex > div {
+    background-color: white;
+    margin: 8px;
+    text-align: center;
+    width: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 1fr);
+    grid-gap: 20px;
+    justify-self: center;
+}
+
+.name {
+    background-color: white;
+    border: thin solid black;
+    bottom: 0%;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    margin: 2rem 2rem 2rem 2rem ;
+    padding: 10px;
+    position: fixed;
+    right: 0%;
 }
 
 @font-face {
@@ -69,14 +134,9 @@ button {
     src: url(SourceSansPro-Regular.ttf) format('ttf');
 }
 
-@font-face {
-    font-family: "bold";
-    src: url(SourceSansPro-BoldItalic.ttf) format('ttf');
-}
-
 /* change background color when screen width is less than 480px */
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     body {
-      background-color: hsl(291°, 29%, 87%);
+      background-color: #fff;
     }
 }
