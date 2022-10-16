@@ -1,0 +1,82 @@
+header {
+    font-style: italic;
+    text-align: center;
+}
+
+header :hover {
+    color: white;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+h2 {
+    color: #295373;
+}
+
+h3 {
+    color: #3e7dad;
+}
+
+body {
+    font-family: "regular", "Source Sans Pro", sans-serif;
+    margin: 4em;
+    background-color: rgb(213, 223, 232);
+}
+
+div {
+    position: relative;
+}
+
+img {
+    max-width: 25%;
+    min-width: 200pt;
+    padding: 4mm 2mm 4mm 2mm;
+    display: inline;
+}
+
+img :hover {
+    display: none;
+}
+
+video {
+    height: auto;
+    width: 40vmin;
+}
+
+video :active {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+button {
+    border-radius: 10%;
+}
+
+.underline {
+    text-decoration: dashed underline;
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(SourceSansPro-Regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(SourceSansPro-BoldItalic.ttf) format('ttf');
+}
+
+/* change background color when screen width is less than 480px */
+@media only screen and (max-width: 480px) {
+    body {
+      background-color: hsl(291°, 29%, 87%);
+    }
+}
